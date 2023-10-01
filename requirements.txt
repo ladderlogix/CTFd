@@ -121,7 +121,7 @@ pybluemonday==0.0.12
     # via -r requirements.in
 pycparser==2.20
     # via cffi
-pydantic==1.6.2
+pydantic==1.10.13
     # via -r requirements.in
 pymysql[rsa]==0.9.3
     # via -r requirements.in
