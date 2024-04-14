@@ -83,7 +83,7 @@ greenlet==2.0.1
     #   sqlalchemy
 gunicorn==20.1.0
     # via -r requirements.in
-idna==2.10
+idna==3.7
     # via requests
 itsdangerous==2.1.2
     # via flask
