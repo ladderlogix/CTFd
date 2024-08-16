@@ -20,7 +20,7 @@
     "dayjs": "^1.11.0",
     "echarts": "^5.3.2",
     "lolight": "^1.4.0",
-    "vue": "^3.2.25"
+    "vue": "^3.4.34"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
