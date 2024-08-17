@@ -37,8 +37,8 @@ def test_challenge_team_submit():
             r = second_client.post("/api/v1/challenges/attempt", json=flag)
             assert r.json["data"]["status"] == "already_solved"
         standings = get_standings()
-        assert standings[0][2] == "team_name"
-        assert standings[0][3] == 100
+        assert standings[0].name == "team_name"
+        assert standings[0].score == 100
     destroy_ctfd(app)
 
 
@@ -51,7 +51,7 @@ def test_anonymous_users_view_public_challenges_without_team():
         with app.test_client() as client:
             r = client.get("/challenges")
             assert r.status_code == 302
-            assert r.location.startswith("/login")
+            assert r.location.startswith("http://localhost/login")
 
         set_config("challenge_visibility", "public")
         with app.test_client() as client:
@@ -61,5 +61,5 @@ def test_anonymous_users_view_public_challenges_without_team():
         with login_as_user(app) as client:
             r = client.get("/challenges")
             assert r.status_code == 302
-            assert r.location.startswith("/team")
+            assert r.location.startswith("http://localhost/team")
     destroy_ctfd(app)
