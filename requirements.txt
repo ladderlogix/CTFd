@@ -41,7 +41,7 @@ click==8.2.1
     # via flask
 cmarkgfm==2024.11.20
     # via -r requirements.in
-cryptography==45.0.6
+cryptography==46.0.5
     # via pymysql
 dataset==1.6.2
     # via -r requirements.in
