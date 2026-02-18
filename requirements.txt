@@ -129,7 +129,7 @@ pillow==11.3.0
     # via -r requirements.in
 pycparser==2.22
     # via cffi
-pydantic==1.6.2
+pydantic==2.4.0
     # via -r requirements.in
 pymysql[rsa]==1.1.1
     # via
